@@ -1,0 +1,28 @@
+/* 
+  Readme.strings
+  WuZhouHuiSwift
+
+  Created by QianHan on 2017/5/6.
+  Copyright © 2017年 karl.luo. All rights reserved.
+*/
+
+
+/*******
+ 使用案例
+ 
+ self.bannerScrollView = LoopScrollView(frame: CGRect(x: 0.0,
+ y: 0.0,
+ width: self.view.qh_width(),
+ height: 200.0))
+ self.view.addSubview(self.bannerScrollView)
+ let imageUrls = [
+ "http://pic.58pic.com/58pic/14/27/45/71r58PICmDM_1024.jpg",
+ "http://img01.taopic.com/141128/240418-14112P9345826.jpg",
+ "http://pic38.nipic.com/20140228/3822951_135521683000_2.jpg",
+ "http://img2.3lian.com/img2007/19/51/025.jpg",
+ "http://pic9.nipic.com/20100818/5462876_150854046500_2.jpg"
+ ]
+ self.bannerScrollView.setImageUrls(urls: imageUrls)
+ self.bannerScrollView.delegate = self
+ 
+ */

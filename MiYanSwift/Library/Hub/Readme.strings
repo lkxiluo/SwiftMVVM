@@ -1,0 +1,16 @@
+/* 
+  Readme.strings
+  WuZhouHuiSwift
+
+  Created by QianHan on 2017/5/6.
+  Copyright © 2017年 karl.luo. All rights reserved.
+*/
+
+/****
+ 使用说明
+ 
+ ProgressHub.show()     // 显示加载
+ ProgressHub.dismiss()  // 隐藏
+ ProgressHub.showStatus(statusString: "加载数据失败") // 显示提示
+ 
+ */

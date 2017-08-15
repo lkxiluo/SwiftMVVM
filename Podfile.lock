@@ -1,0 +1,49 @@
+PODS:
+  - Alamofire (4.4.0)
+  - DKImagePickerController (3.5.1):
+    - DKImagePickerController/Camera (= 3.5.1)
+    - DKImagePickerController/ImageManager (= 3.5.1)
+  - DKImagePickerController/Camera (3.5.1)
+  - DKImagePickerController/ImageManager (3.5.1)
+  - FSPagerView (0.5.0)
+  - Hero (0.3.6)
+  - KeychainAccess (3.0.2)
+  - Kingfisher (3.6.1)
+  - PageMenu (1.2.9)
+  - SKPhotoBrowser (4.0.1)
+  - SnapKit (3.2.0)
+  - SwifterSwift (1.6.3)
+  - SwiftyJSON (3.1.4)
+  - Timepiece (1.1.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - DKImagePickerController
+  - FSPagerView
+  - Hero
+  - KeychainAccess
+  - Kingfisher
+  - PageMenu
+  - SKPhotoBrowser
+  - SnapKit
+  - SwifterSwift
+  - SwiftyJSON
+  - Timepiece
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  DKImagePickerController: 8db7e76a88a7a66a893ba30e935cc4c9bb7ed335
+  FSPagerView: 64df73fea77ec77eaa4f8a1c6dfd81d2adef0bac
+  Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
+  KeychainAccess: a986406022dfc7c634c691ad3bec670cc6a32002
+  Kingfisher: 2f31cb75f3e98d3d4c406cbdcd9b263e956cfa67
+  PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
+  SKPhotoBrowser: 3a7c6fc02aa1620ab17253a47a49fafda46536e8
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SwifterSwift: 76bf942a17769ebf8fb77f89138cbbd525c039c0
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Timepiece: 4190a7bc5ae1c05c87531fd75b14e17d2a017902
+
+PODFILE CHECKSUM: 8df3438577a918e0e52556f15f31e5ba4dc707c7
+
+COCOAPODS: 1.2.1.beta.1
