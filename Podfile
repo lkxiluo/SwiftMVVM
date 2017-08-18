@@ -12,6 +12,7 @@ target 'MiYanSwift' do
     #pod 'SQLite.swift' # 数据库操作
     pod 'Hero' # VC跳转动画
     pod 'Timepiece' #
+    pod 'ESPullToRefresh' # 下拉刷新
 #    pod 'ImageViewer' # 图片浏览
     pod 'SKPhotoBrowser' # 图片浏览，带描述
     pod 'SwiftyJSON' # json解析

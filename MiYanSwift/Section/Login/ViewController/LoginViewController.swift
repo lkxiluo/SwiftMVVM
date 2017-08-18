@@ -24,13 +24,13 @@ final class LoginViewController: BaseViewController {
         
         super.viewDidLoad()
         
-        self.title = "登录"
-        self.viewModel = LoginViewModel()
-        self.setupView()
-        self.accountTextField?.becomeFirstResponder()
+        title = "登录"
+        viewModel = LoginViewModel()
+        setupView()
+        accountTextField?.becomeFirstResponder()
         
         let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapGestureClick))
-        self.view.addGestureRecognizer(tapGesture)
+        view.addGestureRecognizer(tapGesture)
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,10 +41,14 @@ final class LoginViewController: BaseViewController {
     // MARK:  - event response
     @objc fileprivate func loginClick() -> Void {
         
-        viewModel?.login(completeHandler: { (isSuccess: Bool) in
+        ProgressHub.show()
+        viewModel?.login(messageHandler: { (message: String) in
+            
+            ProgressHub.showStatus(statusString: message)
+        }, completeHandler: { (isSuccess: Bool) in
             
             if isSuccess {
-            
+                
                 QHLog("跳转")
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 let tabBarController = TabBarViewController()
@@ -55,8 +59,8 @@ final class LoginViewController: BaseViewController {
     
     @objc fileprivate func tapGestureClick() -> Void {
         
-        self.accountTextField?.resignFirstResponder()
-        self.passwordTextField?.resignFirstResponder()
+        accountTextField?.resignFirstResponder()
+        passwordTextField?.resignFirstResponder()
     }
     
     func accountTextFieldDidChange(_ textField: UITextField) {
@@ -80,10 +84,10 @@ final class LoginViewController: BaseViewController {
     // MARK:  - private method
     private func setupView() {
         
-        self.initLogoImageView()
-        self.initAccountTextField()
-        self.initPasswordTextField()
-        self.initLoginButton()
+        initLogoImageView()
+        initAccountTextField()
+        initPasswordTextField()
+        initLoginButton()
     }
 }
 
@@ -105,12 +109,12 @@ fileprivate extension LoginViewController {
         if (self.logoImageView == nil) {
 
             let logoImage:UIImage      = UIImage(named: "login_sign_logo")!
-            self.logoImageView         = UIImageView()
-            self.logoImageView?.frame  = CGRect(x: 0.0, y: 0.0, width: FITSCREEN(f: 110.0), height: FITSCREEN(f: 71.0))
-            self.logoImageView?.center = CGPoint(x: SYSTEMMACROS_SCREEN_WIDTH / 2, y: FITSCREEN(f: 80.0))
-            self.logoImageView?.contentMode = .scaleAspectFit
-            self.logoImageView?.image  = logoImage
-            self.view.addSubview(self.logoImageView!)
+            logoImageView              = UIImageView()
+            logoImageView?.frame       = CGRect(x: 0.0, y: 0.0, width: FITSCREEN(f: 110.0), height: FITSCREEN(f: 71.0))
+            logoImageView?.center      = CGPoint(x: SYSTEMMACROS_SCREEN_WIDTH / 2, y: FITSCREEN(f: 80.0))
+            logoImageView?.contentMode = .scaleAspectFit
+            logoImageView?.image       = logoImage
+            view.addSubview(self.logoImageView!)
         }
     }
     
@@ -118,58 +122,58 @@ fileprivate extension LoginViewController {
         
         if self.accountTextField == nil {
         
-            self.accountTextField = self.textField()
-            self.accountTextField?.qh_topMargin(toView: self.logoImageView!, margin: APPMACROS_BASE_MARGIN * 5)
-            self.accountTextField?.leftView     = self.textFieldLeftView(image: UIImage(named: "login_account")!)
-            self.accountTextField?.placeholder  = "请输入你的手机号"
-            self.accountTextField?.keyboardType = .numberPad
-            self.accountTextField?.delegate     = self
-            self.accountTextField?.addTarget(self,
-                                             action: #selector(accountTextFieldDidChange(_:)),
-                                             for: UIControlEvents.editingChanged)
+            accountTextField = textField()
+            accountTextField?.qh_topMargin(toView: logoImageView!, margin: APPMACROS_BASE_MARGIN * 5)
+            accountTextField?.leftView     = textFieldLeftView(image: UIImage(named: "login_account")!)
+            accountTextField?.placeholder  = "请输入你的手机号"
+            accountTextField?.keyboardType = .numberPad
+            accountTextField?.delegate     = self
+            accountTextField?.addTarget(self,
+                                        action: #selector(accountTextFieldDidChange(_:)),
+                                        for: UIControlEvents.editingChanged)
             
-            self.view.addSubview(self.accountTextField!)
+            view.addSubview(self.accountTextField!)
         }
     }
     
     func initPasswordTextField() -> Void {
         
-        if self.passwordTextField == nil {
+        if passwordTextField == nil {
             
-            self.passwordTextField = self.textField()
-            self.passwordTextField?.qh_topMargin(toView: self.accountTextField!, margin: APPMACROS_LINE_HEIGHT)
-            self.passwordTextField?.leftView          = self.textFieldLeftView(image: UIImage(named: "login_password")!)
-            self.passwordTextField?.placeholder       = "请输入你的密码"
-            self.passwordTextField?.keyboardType      = .default
-            self.passwordTextField?.isSecureTextEntry = true
-            self.passwordTextField?.delegate          = self
-            self.passwordTextField?.addTarget(self,
-                                             action: #selector(passwordTextFieldDidChange(_:)),
-                                             for: UIControlEvents.editingChanged)
+            passwordTextField = textField()
+            passwordTextField?.qh_topMargin(toView: accountTextField!, margin: APPMACROS_LINE_HEIGHT)
+            passwordTextField?.leftView          = textFieldLeftView(image: UIImage(named: "login_password")!)
+            passwordTextField?.placeholder       = "请输入你的密码"
+            passwordTextField?.keyboardType      = .default
+            passwordTextField?.isSecureTextEntry = true
+            passwordTextField?.delegate          = self
+            passwordTextField?.addTarget(self,
+                                         action: #selector(passwordTextFieldDidChange(_:)),
+                                         for: UIControlEvents.editingChanged)
             
-            self.view.addSubview(self.passwordTextField!)
+            view.addSubview(passwordTextField!)
         }
     }
     
     func initLoginButton() -> Void {
         
-        if self.loginButton == nil {
+        if loginButton == nil {
         
-            self.loginButton = UIButton(type: .custom)
-            self.loginButton?.qh_x(APPMACROS_BASE_MARGIN * 3)
-            self.loginButton?.qh_width(self.view.qh_width() - APPMACROS_BASE_MARGIN * 3 * 2)
-            self.loginButton?.qh_height(44.0)
-            self.loginButton?.qh_topMargin(toView: self.passwordTextField!, margin: APPMACROS_BASE_MARGIN * 3)
-            self.loginButton?.layer.cornerRadius  = 3.0
-            self.loginButton?.layer.masksToBounds = true
-            self.loginButton?.isEnabled           = false
-            self.loginButton?.titleLabel?.font    = APPMACROS_BIG_FONT
-            self.loginButton?.setBackgroundImage(UIImage.qh_creatImageWithColor(color:APPMACROS_MAINCOLOR), for: .normal)
-            self.loginButton?.setBackgroundImage(UIImage.qh_creatImageWithColor(color:APPMACROS_UNENBLECOLOR), for: .disabled)
-            self.loginButton?.setTitleColor(UIColor.white, for: .normal)
-            self.loginButton?.setTitle("登录", for: .normal)
-            self.loginButton?.addTarget(self, action: #selector(loginClick), for: .touchUpInside)
-            self.view.addSubview(self.loginButton!)
+            loginButton = UIButton(type: .custom)
+            loginButton?.qh_x(APPMACROS_BASE_MARGIN * 3)
+            loginButton?.qh_width(view.qh_width() - APPMACROS_BASE_MARGIN * 3 * 2)
+            loginButton?.qh_height(44.0)
+            loginButton?.qh_topMargin(toView: passwordTextField!, margin: APPMACROS_BASE_MARGIN * 3)
+            loginButton?.layer.cornerRadius  = 3.0
+            loginButton?.layer.masksToBounds = true
+            loginButton?.isEnabled           = false
+            loginButton?.titleLabel?.font    = APPMACROS_BIG_FONT
+            loginButton?.setBackgroundImage(UIImage.qh_creatImageWithColor(color:APPMACROS_MAINCOLOR), for: .normal)
+            loginButton?.setBackgroundImage(UIImage.qh_creatImageWithColor(color:APPMACROS_UNENBLECOLOR), for: .disabled)
+            loginButton?.setTitleColor(UIColor.white, for: .normal)
+            loginButton?.setTitle("登录", for: .normal)
+            loginButton?.addTarget(self, action: #selector(loginClick), for: .touchUpInside)
+            view.addSubview(loginButton!)
         }
     }
     
@@ -178,7 +182,7 @@ fileprivate extension LoginViewController {
         let textField = UITextField()
         
         textField.qh_x(0.0)
-        textField.qh_width(self.view.qh_width())
+        textField.qh_width(view.qh_width())
         textField.qh_height(40.0)
         textField.textColor       = APPMACROS_MAIN_TEXTCOLOR
         textField.font            = APPMACROS_MAIN_FONT
@@ -191,18 +195,11 @@ fileprivate extension LoginViewController {
     
     func textFieldLeftView(image:UIImage) -> UIView {
         
-        let leftView: UIView = UIView(frame: CGRect(x: 0.0,
-                                                    y: 0.0,
-                                                    width: (self.accountTextField?.qh_height())!,
-                                                    height: (self.accountTextField?.qh_height())!))
-        
+        let leftView: UIView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: (accountTextField?.qh_height())!, height: (accountTextField?.qh_height())!))
         let width: CGFloat         = 20.0
         let imageView: UIImageView = UIImageView()
         imageView.backgroundColor  = .clear
-        imageView.frame            = CGRect(x: (leftView.qh_width() - width) / 2,
-                                            y: ((self.accountTextField?.qh_height())! - width) / 2,
-                                            width: width,
-                                            height: width)
+        imageView.frame            = CGRect(x: (leftView.qh_width() - width) / 2, y: ((accountTextField?.qh_height())! - width) / 2, width: width, height: width)
         imageView.contentMode      = .scaleAspectFit
         imageView.image            = image;
         leftView.addSubview(imageView)

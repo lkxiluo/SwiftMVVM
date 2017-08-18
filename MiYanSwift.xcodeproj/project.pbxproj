@@ -11,12 +11,13 @@
 		A40AEF801F356ECE00894AD2 /* NotificationMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40AEF7F1F356ECE00894AD2 /* NotificationMacros.swift */; };
 		A40AEF821F35BB9A00894AD2 /* PurchasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40AEF811F35BB9A00894AD2 /* PurchasePageViewController.swift */; };
 		A40AEF841F35BC4D00894AD2 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40AEF831F35BC4D00894AD2 /* TabBarViewController.swift */; };
+		A41328C21F4593610082D34D /* ShoseIconsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41328C11F4593610082D34D /* ShoseIconsCollectionViewCell.swift */; };
 		A454DD4B1F3C411E008DDBF2 /* GrassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A454DD4A1F3C411E008DDBF2 /* GrassViewController.swift */; };
 		A454DD4D1F3C4130008DDBF2 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A454DD4C1F3C4130008DDBF2 /* VideoViewController.swift */; };
 		A454DD531F3C5F02008DDBF2 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A454DD521F3C5F02008DDBF2 /* UIButton+Extensions.swift */; };
 		A455D9841F384CE6007F230D /* RecommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A455D9831F384CE6007F230D /* RecommentViewController.swift */; };
 		A460A38C1F3D900F00862684 /* RecommentBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460A38B1F3D900F00862684 /* RecommentBaseRequest.swift */; };
-		A460A38E1F3D923600862684 /* RecommentBaseViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460A38D1F3D923600862684 /* RecommentBaseViewModelProtocol.swift */; };
+		A460A38E1F3D923600862684 /* RecommentViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460A38D1F3D923600862684 /* RecommentViewModelProtocol.swift */; };
 		A478CB031F205E42007A7E80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A478CB021F205E42007A7E80 /* Assets.xcassets */; };
 		A478CB061F205E42007A7E80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A478CB041F205E42007A7E80 /* LaunchScreen.storyboard */; };
 		A478CB111F205E43007A7E80 /* MiYanSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478CB101F205E43007A7E80 /* MiYanSwiftTests.swift */; };
@@ -53,7 +54,31 @@
 		A486F7F31F344A9800456CBF /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A486F7F21F344A9800456CBF /* LoginRequest.swift */; };
 		A495DC371F305B90005F5765 /* NSString+MYURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A495DC361F305B90005F5765 /* NSString+MYURL.swift */; };
 		A495DC3B1F306BFE005F5765 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A495DC3A1F306BFE005F5765 /* LoginViewModel.swift */; };
+		A4A04B9B1F46864E0012F589 /* HotCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A04B9A1F46864E0012F589 /* HotCategoryCollectionViewCell.swift */; };
+		A4A04B9D1F46947A0012F589 /* HotCateItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A04B9C1F46947A0012F589 /* HotCateItemCollectionViewCell.swift */; };
+		A4A04B9F1F46C4DE0012F589 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A04B9E1F46C4DE0012F589 /* HeaderCollectionReusableView.swift */; };
 		A4DA7A6B1F41A38A009DB93F /* StringValidateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A6A1F41A38A009DB93F /* StringValidateExtention.swift */; };
+		A4DA7A6D1F4277D3009DB93F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A6C1F4277D3009DB93F /* LoginModel.swift */; };
+		A4DA7A6F1F428F1D009DB93F /* RecommentBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A6E1F428F1D009DB93F /* RecommentBaseModel.swift */; };
+		A4DA7A711F43C611009DB93F /* RecommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A701F43C611009DB93F /* RecommentViewModel.swift */; };
+		A4DA7A731F43D2FC009DB93F /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A721F43D2FC009DB93F /* BannerModel.swift */; };
+		A4DA7A751F43D5B8009DB93F /* ShosenIconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A741F43D5B8009DB93F /* ShosenIconModel.swift */; };
+		A4DA7A771F43D7A0009DB93F /* HotCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A761F43D7A0009DB93F /* HotCategoryModel.swift */; };
+		A4DA7A791F43D8DC009DB93F /* WholeSaleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A781F43D8DC009DB93F /* WholeSaleModel.swift */; };
+		A4DA7A7B1F43DC3B009DB93F /* GoodsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A7A1F43DC3B009DB93F /* GoodsModel.swift */; };
+		A4DA7A7D1F43DF9A009DB93F /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A7C1F43DF9A009DB93F /* ActivityModel.swift */; };
+		A4DA7A7F1F43E6D7009DB93F /* TopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A7E1F43E6D7009DB93F /* TopicModel.swift */; };
+		A4DA7A811F43EABD009DB93F /* ActivityTopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A801F43EABD009DB93F /* ActivityTopicModel.swift */; };
+		A4DA7A831F44181B009DB93F /* RecommentDateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A821F44181B009DB93F /* RecommentDateProtocol.swift */; };
+		A4DA7A871F4419F2009DB93F /* RecommentBannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A861F4419F2009DB93F /* RecommentBannerViewModel.swift */; };
+		A4DA7A891F441E8B009DB93F /* RecommentShosenIconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A881F441E8B009DB93F /* RecommentShosenIconViewModel.swift */; };
+		A4DA7A8B1F441F8F009DB93F /* RecommentHotCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A8A1F441F8F009DB93F /* RecommentHotCategoryViewModel.swift */; };
+		A4DA7A8D1F4423A8009DB93F /* RecommentWholeSaleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A8C1F4423A8009DB93F /* RecommentWholeSaleViewModel.swift */; };
+		A4DA7A8F1F4424B3009DB93F /* RecommentActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A8E1F4424B3009DB93F /* RecommentActivityModel.swift */; };
+		A4DA7A911F442702009DB93F /* RecommentTopicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A901F442702009DB93F /* RecommentTopicViewModel.swift */; };
+		A4DA7A931F442838009DB93F /* RecommentActivityTopicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A921F442838009DB93F /* RecommentActivityTopicViewModel.swift */; };
+		A4DA7A951F442C3D009DB93F /* RecommentGoodsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A941F442C3D009DB93F /* RecommentGoodsViewModel.swift */; };
+		A4DA7A991F454467009DB93F /* RecommentBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA7A981F454467009DB93F /* RecommentBannerCollectionViewCell.swift */; };
 		C64F0C27878EA1C00B1D4D06 /* Pods_MiYanSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74ABE5E55FAD7445EAFF24AD /* Pods_MiYanSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,12 +102,13 @@
 		A40AEF7F1F356ECE00894AD2 /* NotificationMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationMacros.swift; sourceTree = "<group>"; };
 		A40AEF811F35BB9A00894AD2 /* PurchasePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchasePageViewController.swift; sourceTree = "<group>"; };
 		A40AEF831F35BC4D00894AD2 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		A41328C11F4593610082D34D /* ShoseIconsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoseIconsCollectionViewCell.swift; sourceTree = "<group>"; };
 		A454DD4A1F3C411E008DDBF2 /* GrassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrassViewController.swift; sourceTree = "<group>"; };
 		A454DD4C1F3C4130008DDBF2 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		A454DD521F3C5F02008DDBF2 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		A455D9831F384CE6007F230D /* RecommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommentViewController.swift; sourceTree = "<group>"; };
 		A460A38B1F3D900F00862684 /* RecommentBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommentBaseRequest.swift; sourceTree = "<group>"; };
-		A460A38D1F3D923600862684 /* RecommentBaseViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommentBaseViewModelProtocol.swift; sourceTree = "<group>"; };
+		A460A38D1F3D923600862684 /* RecommentViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommentViewModelProtocol.swift; sourceTree = "<group>"; };
 		A478CAF81F205E42007A7E80 /* MiYanSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiYanSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A478CB021F205E42007A7E80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A478CB051F205E42007A7E80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -123,7 +149,31 @@
 		A486F7F21F344A9800456CBF /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		A495DC361F305B90005F5765 /* NSString+MYURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+MYURL.swift"; sourceTree = "<group>"; };
 		A495DC3A1F306BFE005F5765 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A4A04B9A1F46864E0012F589 /* HotCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		A4A04B9C1F46947A0012F589 /* HotCateItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotCateItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		A4A04B9E1F46C4DE0012F589 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		A4DA7A6A1F41A38A009DB93F /* StringValidateExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringValidateExtention.swift; sourceTree = "<group>"; };
+		A4DA7A6C1F4277D3009DB93F /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		A4DA7A6E1F428F1D009DB93F /* RecommentBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommentBaseModel.swift; sourceTree = "<group>"; };
+		A4DA7A701F43C611009DB93F /* RecommentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommentViewModel.swift; sourceTree = "<group>"; };
+		A4DA7A721F43D2FC009DB93F /* BannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
+		A4DA7A741F43D5B8009DB93F /* ShosenIconModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShosenIconModel.swift; sourceTree = "<group>"; };
+		A4DA7A761F43D7A0009DB93F /* HotCategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotCategoryModel.swift; sourceTree = "<group>"; };
+		A4DA7A781F43D8DC009DB93F /* WholeSaleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WholeSaleModel.swift; sourceTree = "<group>"; };
+		A4DA7A7A1F43DC3B009DB93F /* GoodsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsModel.swift; sourceTree = "<group>"; };
+		A4DA7A7C1F43DF9A009DB93F /* ActivityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
+		A4DA7A7E1F43E6D7009DB93F /* TopicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicModel.swift; sourceTree = "<group>"; };
+		A4DA7A801F43EABD009DB93F /* ActivityTopicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTopicModel.swift; sourceTree = "<group>"; };
+		A4DA7A821F44181B009DB93F /* RecommentDateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommentDateProtocol.swift; sourceTree = "<group>"; };
+		A4DA7A861F4419F2009DB93F /* RecommentBannerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommentBannerViewModel.swift; sourceTree = "<group>"; };
+		A4DA7A881F441E8B009DB93F /* RecommentShosenIconViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommentShosenIconViewModel.swift; sourceTree = "<group>"; };
+		A4DA7A8A1F441F8F009DB93F /* RecommentHotCategoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommentHotCategoryViewModel.swift; sourceTree = "<group>"; };
+		A4DA7A8C1F4423A8009DB93F /* RecommentWholeSaleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommentWholeSaleViewModel.swift; sourceTree = "<group>"; };
+		A4DA7A8E1F4424B3009DB93F /* RecommentActivityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommentActivityModel.swift; sourceTree = "<group>"; };
+		A4DA7A901F442702009DB93F /* RecommentTopicViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommentTopicViewModel.swift; sourceTree = "<group>"; };
+		A4DA7A921F442838009DB93F /* RecommentActivityTopicViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommentActivityTopicViewModel.swift; sourceTree = "<group>"; };
+		A4DA7A941F442C3D009DB93F /* RecommentGoodsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommentGoodsViewModel.swift; sourceTree = "<group>"; };
+		A4DA7A981F454467009DB93F /* RecommentBannerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommentBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -459,6 +509,15 @@
 		A478CB7E1F20807B007A7E80 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A4DA7A6E1F428F1D009DB93F /* RecommentBaseModel.swift */,
+				A4DA7A721F43D2FC009DB93F /* BannerModel.swift */,
+				A4DA7A741F43D5B8009DB93F /* ShosenIconModel.swift */,
+				A4DA7A761F43D7A0009DB93F /* HotCategoryModel.swift */,
+				A4DA7A781F43D8DC009DB93F /* WholeSaleModel.swift */,
+				A4DA7A7A1F43DC3B009DB93F /* GoodsModel.swift */,
+				A4DA7A7C1F43DF9A009DB93F /* ActivityModel.swift */,
+				A4DA7A7E1F43E6D7009DB93F /* TopicModel.swift */,
+				A4DA7A801F43EABD009DB93F /* ActivityTopicModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -474,6 +533,11 @@
 		A478CB821F20807B007A7E80 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A4DA7A981F454467009DB93F /* RecommentBannerCollectionViewCell.swift */,
+				A41328C11F4593610082D34D /* ShoseIconsCollectionViewCell.swift */,
+				A4A04B9A1F46864E0012F589 /* HotCategoryCollectionViewCell.swift */,
+				A4A04B9C1F46947A0012F589 /* HotCateItemCollectionViewCell.swift */,
+				A4A04B9E1F46C4DE0012F589 /* HeaderCollectionReusableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -493,6 +557,15 @@
 			isa = PBXGroup;
 			children = (
 				A486F7EA1F33FBB100456CBF /* ViewModelProtocol */,
+				A4DA7A701F43C611009DB93F /* RecommentViewModel.swift */,
+				A4DA7A861F4419F2009DB93F /* RecommentBannerViewModel.swift */,
+				A4DA7A881F441E8B009DB93F /* RecommentShosenIconViewModel.swift */,
+				A4DA7A8A1F441F8F009DB93F /* RecommentHotCategoryViewModel.swift */,
+				A4DA7A8C1F4423A8009DB93F /* RecommentWholeSaleViewModel.swift */,
+				A4DA7A8E1F4424B3009DB93F /* RecommentActivityModel.swift */,
+				A4DA7A901F442702009DB93F /* RecommentTopicViewModel.swift */,
+				A4DA7A921F442838009DB93F /* RecommentActivityTopicViewModel.swift */,
+				A4DA7A941F442C3D009DB93F /* RecommentGoodsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -520,6 +593,7 @@
 		A478CB8A1F20807B007A7E80 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A4DA7A6C1F4277D3009DB93F /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -717,7 +791,8 @@
 		A486F7EA1F33FBB100456CBF /* ViewModelProtocol */ = {
 			isa = PBXGroup;
 			children = (
-				A460A38D1F3D923600862684 /* RecommentBaseViewModelProtocol.swift */,
+				A460A38D1F3D923600862684 /* RecommentViewModelProtocol.swift */,
+				A4DA7A821F44181B009DB93F /* RecommentDateProtocol.swift */,
 			);
 			path = ViewModelProtocol;
 			sourceTree = "<group>";
@@ -920,39 +995,64 @@
 			buildActionMask = 2147483647;
 			files = (
 				A478CBAE1F208892007A7E80 /* LoginViewController.swift in Sources */,
+				A4DA7A991F454467009DB93F /* RecommentBannerCollectionViewCell.swift in Sources */,
 				A486F7F31F344A9800456CBF /* LoginRequest.swift in Sources */,
+				A4DA7A6F1F428F1D009DB93F /* RecommentBaseModel.swift in Sources */,
 				A478CBA61F20807B007A7E80 /* MineCenterViewController.swift in Sources */,
 				A478CBB21F20A0B3007A7E80 /* VendorMacros.swift in Sources */,
 				A486F7EF1F3417DA00456CBF /* LoginViewModelProtocol.swift in Sources */,
+				A4DA7A6D1F4277D3009DB93F /* LoginModel.swift in Sources */,
 				A478CB691F208064007A7E80 /* NavigationViewController.swift in Sources */,
+				A4DA7A7D1F43DF9A009DB93F /* ActivityModel.swift in Sources */,
 				A478CB461F20801A007A7E80 /* TabBar.swift in Sources */,
+				A4DA7A831F44181B009DB93F /* RecommentDateProtocol.swift in Sources */,
+				A4DA7A771F43D7A0009DB93F /* HotCategoryModel.swift in Sources */,
+				A41328C21F4593610082D34D /* ShoseIconsCollectionViewCell.swift in Sources */,
 				A454DD4B1F3C411E008DDBF2 /* GrassViewController.swift in Sources */,
 				A478CB1D1F206212007A7E80 /* AppDelegate.swift in Sources */,
+				A4A04B9B1F46864E0012F589 /* HotCategoryCollectionViewCell.swift in Sources */,
 				A478CBA71F20807B007A7E80 /* StoreHomeViewController.swift in Sources */,
+				A4DA7A8F1F4424B3009DB93F /* RecommentActivityModel.swift in Sources */,
 				A40AEF841F35BC4D00894AD2 /* TabBarViewController.swift in Sources */,
+				A4DA7A791F43D8DC009DB93F /* WholeSaleModel.swift in Sources */,
+				A4DA7A711F43C611009DB93F /* RecommentViewModel.swift in Sources */,
 				A478CB681F208064007A7E80 /* BaseViewController.swift in Sources */,
 				A4DA7A6B1F41A38A009DB93F /* StringValidateExtention.swift in Sources */,
 				A478CB3F1F20801A007A7E80 /* ProgressHub.swift in Sources */,
+				A4A04B9D1F46947A0012F589 /* HotCateItemCollectionViewCell.swift in Sources */,
+				A4DA7A871F4419F2009DB93F /* RecommentBannerViewModel.swift in Sources */,
+				A4DA7A891F441E8B009DB93F /* RecommentShosenIconViewModel.swift in Sources */,
 				A454DD531F3C5F02008DDBF2 /* UIButton+Extensions.swift in Sources */,
+				A4DA7A8D1F4423A8009DB93F /* RecommentWholeSaleViewModel.swift in Sources */,
 				A40AEF821F35BB9A00894AD2 /* PurchasePageViewController.swift in Sources */,
 				A460A38C1F3D900F00862684 /* RecommentBaseRequest.swift in Sources */,
+				A4A04B9F1F46C4DE0012F589 /* HeaderCollectionReusableView.swift in Sources */,
 				A478CB9F1F20807B007A7E80 /* CartViewController.swift in Sources */,
 				A478CB3A1F20801A007A7E80 /* AlertView.swift in Sources */,
-				A460A38E1F3D923600862684 /* RecommentBaseViewModelProtocol.swift in Sources */,
+				A460A38E1F3D923600862684 /* RecommentViewModelProtocol.swift in Sources */,
 				A478CB671F208064007A7E80 /* BaseRequest.swift in Sources */,
 				A454DD4D1F3C4130008DDBF2 /* VideoViewController.swift in Sources */,
+				A4DA7A731F43D2FC009DB93F /* BannerModel.swift in Sources */,
 				A478CB531F20802F007A7E80 /* UIView+FrameLayout.swift in Sources */,
+				A4DA7A911F442702009DB93F /* RecommentTopicViewModel.swift in Sources */,
+				A4DA7A811F43EABD009DB93F /* ActivityTopicModel.swift in Sources */,
 				A478CBB01F209F9E007A7E80 /* BusinessEnumMacros.swift in Sources */,
+				A4DA7A8B1F441F8F009DB93F /* RecommentHotCategoryViewModel.swift in Sources */,
+				A4DA7A7B1F43DC3B009DB93F /* GoodsModel.swift in Sources */,
 				A478CB581F208048007A7E80 /* SystemMacros.swift in Sources */,
 				A478CB431F20801A007A7E80 /* LoopScrollView.swift in Sources */,
 				A478CB661F208064007A7E80 /* BaseModel.swift in Sources */,
 				A478CB451F20801A007A7E80 /* RefreshStyle.swift in Sources */,
 				A40AEF801F356ECE00894AD2 /* NotificationMacros.swift in Sources */,
+				A4DA7A951F442C3D009DB93F /* RecommentGoodsViewModel.swift in Sources */,
 				A495DC3B1F306BFE005F5765 /* LoginViewModel.swift in Sources */,
 				A495DC371F305B90005F5765 /* NSString+MYURL.swift in Sources */,
 				A478CB421F20801A007A7E80 /* LoopCollectionViewCell.swift in Sources */,
 				A478CB471F20801A007A7E80 /* TabItem.swift in Sources */,
 				A455D9841F384CE6007F230D /* RecommentViewController.swift in Sources */,
+				A4DA7A931F442838009DB93F /* RecommentActivityTopicViewModel.swift in Sources */,
+				A4DA7A7F1F43E6D7009DB93F /* TopicModel.swift in Sources */,
+				A4DA7A751F43D5B8009DB93F /* ShosenIconModel.swift in Sources */,
 				A401D12A1F2B2AF5006164AA /* UIImage+QHDraw.swift in Sources */,
 				A478CB571F208048007A7E80 /* AppMacros.swift in Sources */,
 				A478CB521F20802F007A7E80 /* UIColor+TypeConvert.swift in Sources */,

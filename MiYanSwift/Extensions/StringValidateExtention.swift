@@ -46,4 +46,14 @@ extension String {
         let passWordPredicate = NSPredicate(format: "SELF MATCHES%@", passWordRegex)
         return passWordPredicate.evaluate(with: self)
     }
+    
+    /// 昵称验证，4到8个汉字
+    ///
+    /// - Returns: 是否符合昵称规则
+    func isNickName() -> Bool {
+    
+        let nicknameRegex = "^[\u{4e00}-\u{9fa5}]{4,8}$"
+        let passWordPredicate = NSPredicate(format: "SELF MATCHES%@", nicknameRegex)
+        return passWordPredicate.evaluate(with: self)
+    }
 }

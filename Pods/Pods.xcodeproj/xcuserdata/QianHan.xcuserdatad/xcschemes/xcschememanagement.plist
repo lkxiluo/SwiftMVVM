@@ -14,6 +14,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ESPullToRefresh-ESPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ESPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FSPagerView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,12 +82,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>083C1C5C0955D80324223FAE1E5E09C5</key>
+		<key>10F0C3C80828CC88CE8154B17E6E0B8F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3BCEAE3712F44531F09840655F42195F</key>
+		<key>112198C00EB235DBF6A6D22FD913ED60</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2F0C0F810568D3E82219429D9D870F04</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>44C56E4D8B640EC014DD2F3222C0D81A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>44D3EDC9F1503C2392B9F30D1BA37A65</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,6 +117,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>83D04EDAE5838FE3657C87DD12181688</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
@@ -102,17 +132,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AEFB167141D8D0C376F2EDF24EA770AE</key>
+		<key>9662B82EFF0E309335532C86D3092BA5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C3ACB05652C134F7D433B872281E3722</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C4944FEC314D1A66588651D006273ADE</key>
+		<key>BB165445F7763F1500D6A1A16F9BF35A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,12 +147,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D8C55835C326C67768EB0D5A3BB29772</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DA6BA25AB3807D46F4108B2E848C3479</key>
+		<key>E011163ADE410E6372389BBFD86EE5CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -25,7 +25,6 @@ class FSPagerViewLayout: UICollectionViewLayout {
     fileprivate var pagerView: FSPagerView? {
         return self.collectionView?.superview?.superview as? FSPagerView
     }
-    fileprivate var layoutAttributes: [IndexPath:FSPagerViewLayoutAttributes] = [:]
     
     fileprivate var isInfinite: Bool = true
     fileprivate var collectionViewSize: CGSize = .zero
@@ -60,15 +59,10 @@ class FSPagerViewLayout: UICollectionViewLayout {
         self.needsReprepare = false
         
         self.collectionViewSize = collectionView.frame.size
-        self.layoutAttributes.removeAll()
 
         // Calculate basic parameters/variables
         self.numberOfSections = pagerView.numberOfSections(in: collectionView)
         self.numberOfItems = pagerView.collectionView(collectionView, numberOfItemsInSection: 0)
-        guard self.numberOfItems > 0 && self.numberOfSections > 0 else {
-            return
-        }
-        
         self.actualItemSize = {
             var size = pagerView.itemSize
             if size == .zero {
@@ -134,7 +128,8 @@ class FSPagerViewLayout: UICollectionViewLayout {
         
         var origin = startPosition
         let maxPosition = self.scrollDirection == .horizontal ? min(rect.maxX,self.contentSize.width-self.actualItemSize.width-self.leadingSpacing) : min(rect.maxY,self.contentSize.height-self.actualItemSize.height-self.leadingSpacing)
-        while origin <= maxPosition {
+        // https://stackoverflow.com/a/10335601/2398107
+        while origin-maxPosition <= max(CGFloat(100.0) * .ulpOfOne * fabs(origin+maxPosition), .leastNonzeroMagnitude) {
             let indexPath = IndexPath(item: itemIndex%self.numberOfItems, section: itemIndex/self.numberOfItems)
             let attributes = self.layoutAttributesForItem(at: indexPath) as! FSPagerViewLayoutAttributes
             self.applyTransform(to: attributes, with: self.pagerView?.transformer)
@@ -147,16 +142,11 @@ class FSPagerViewLayout: UICollectionViewLayout {
     }
     
     override open func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-        var attributes = self.layoutAttributes[indexPath]
-        if attributes == nil {
-            attributes = FSPagerViewLayoutAttributes(forCellWith: indexPath)
-            self.layoutAttributes[indexPath] = attributes
-        }
+        let attributes = FSPagerViewLayoutAttributes(forCellWith: indexPath)
         let frame = self.frame(for: indexPath)
         let center = CGPoint(x: frame.midX, y: frame.midY)
-        attributes!.center = center
-        attributes!.size = self.actualItemSize
-        self.layoutAttributes[indexPath] = attributes
+        attributes.center = center
+        attributes.size = self.actualItemSize
         return attributes
     }
     

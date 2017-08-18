@@ -12,8 +12,22 @@ import KeychainAccess
 
 final class LoginViewModel: LoginViewModelProtocol {
     
-    var account: String  = ""
-    var password: String = ""
+    var loginModel: LoginModel = LoginModel()
+    var account: String  = "" {
+    
+        didSet {
+        
+            loginModel.account = account
+        }
+    }
+    
+    var password: String = "" {
+    
+        didSet {
+        
+            loginModel.password = password
+        }
+    }
     
     func isCanLogin() -> Bool {
     
@@ -24,41 +38,8 @@ final class LoginViewModel: LoginViewModelProtocol {
         return true
     }
     
-    func login(completeHandler: @escaping (_ isSuccess: Bool) -> Void) {
-        
-        QHLog("\(account) \(password)")
-        ProgressHub.show()
-        
-        let params = ["username": account,
-                      "password": password]
-        
-        LoginRequest().starRequest(parameters: params, completeSuccess: { (respondJson: Any) in
-            
-            let respondJs = JSON(respondJson)
-            let message   = respondJs["msg"].stringValue
-            let ret       = respondJs["ret"].intValue
-            
-            if ret != 200 {
-                
-                ProgressHub.showStatus(statusString: message)
-            } else {
-                
-                let data    = respondJs["data"].dictionary
-                let message = data?["msg"]?.stringValue
-                let code    = data?["code"]?.intValue
-                if code == 0 {
-                    
-                    let info     = data?["info"]?.dictionary
-                    let keyChain = Keychain(service: NSString.my_rootUrl())
-                    keyChain[APPMACROS_LOGINTOKEN_KEY] = info?["token"]?.stringValue
-                    
-                    completeHandler(true)
-                }
-                ProgressHub.showStatus(statusString: message!)
-            }
-        }) { (error: Error) in
-            
-            ProgressHub.showStatus(statusString: error.localizedDescription)
-        }
+    func login(messageHandler: @escaping (_ message: String) -> Void, completeHandler: @escaping (_ isSuccess: Bool) -> Void) -> Void {
+    
+        loginModel.login(messageHandler: messageHandler, completeHandler: completeHandler)
     }
 }

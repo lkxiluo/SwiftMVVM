@@ -34,6 +34,14 @@ final class LoopScrollView: UIView, UICollectionViewDelegate, UICollectionViewDa
         }
     }
     
+    var pageDotColor: UIColor = .red {
+    
+        didSet {
+        
+            pageControll.currentPageIndicatorTintColor = pageDotColor
+        }
+    }
+    
     private var currentIndexPath:IndexPath = IndexPath(row: 0, section: 0)
     
     override init(frame: CGRect) {
@@ -227,8 +235,8 @@ final class LoopScrollView: UIView, UICollectionViewDelegate, UICollectionViewDa
                                                                  height: height)
         self.pageControll.currentPage                   = 0
         self.pageControll.numberOfPages                 = self.itemCount()
-        self.pageControll.currentPageIndicatorTintColor = APPMACROS_MAINCOLOR
-        self.pageControll.pageIndicatorTintColor        = UIColor.white
+        self.pageControll.currentPageIndicatorTintColor = pageDotColor
+        self.pageControll.pageIndicatorTintColor        = .white
         self.pageControll.isUserInteractionEnabled      = false
     }
     

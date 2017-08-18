@@ -13,6 +13,6 @@ protocol LoginViewModelProtocol {
     var account: String {get set}
     var password: String {get set}
     
-    func login(completeHandler: @escaping (_ isSuccess: Bool) -> Void) -> Void
+    func login(messageHandler: @escaping (_ message: String) -> Void, completeHandler: @escaping (_ isSuccess: Bool) -> Void) -> Void
     func isCanLogin() -> Bool
 }

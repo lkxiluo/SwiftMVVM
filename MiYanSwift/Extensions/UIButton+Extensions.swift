@@ -41,7 +41,6 @@ extension UIButton {
         var imageEdgeInsets = UIEdgeInsets()
         var titleEdgeInsets = UIEdgeInsets()
         
-        // 系统默认是.left关系
         switch imagePosition {
             
         case .left:

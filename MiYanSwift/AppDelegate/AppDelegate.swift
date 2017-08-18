@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func rootViewController() -> Void {
         
         let keyChain = Keychain(service: NSString.my_rootUrl())
-        keyChain[APPMACROS_LOGINTOKEN_KEY] = nil
+//        keyChain[APPMACROS_LOGINTOKEN_KEY] = nil
         let token    = keyChain[APPMACROS_LOGINTOKEN_KEY]
         if token != nil {
             

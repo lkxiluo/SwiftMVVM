@@ -14,7 +14,7 @@ extension NSString {
     
     /// 请求链接基础
     ///
-    /// - Parameter isNewInterface: 是否是对接新接口
+    /// - Parameter isNewInterface: 是否是新接口
     /// - Returns: 请求链接
     class func my_baseUrl(isNewInterface: Bool) -> String {
     
