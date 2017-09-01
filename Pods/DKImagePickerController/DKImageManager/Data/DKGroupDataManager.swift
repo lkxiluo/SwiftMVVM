@@ -67,10 +67,14 @@ public class DKGroupDataManager: DKBaseManager, PHPhotoLibraryChangeObserver {
                         groups[assetGroup.groupId] = assetGroup
                         groupIds.append(assetGroup.groupId)
                     }
-                    strongSelf.updatePartial(groups: groups, groupIds: groupIds, completeBlock: completeBlock)
+                    if !groupIds.isEmpty {
+                        strongSelf.updatePartial(groups: groups, groupIds: groupIds, completeBlock: completeBlock)
+                    }
                 })
 				PHPhotoLibrary.shared().register(strongSelf)
-				strongSelf.updatePartial(groups: groups, groupIds: groupIds, completeBlock: completeBlock)
+                if !groupIds.isEmpty {
+                    strongSelf.updatePartial(groups: groups, groupIds: groupIds, completeBlock: completeBlock)
+                }
 			}
 		}
 	}
@@ -161,6 +165,7 @@ public class DKGroupDataManager: DKBaseManager, PHPhotoLibraryChangeObserver {
         let collection = PHAssetCollection.transientAssetCollection(with: filtered, title: nil)
         return PHAsset.fetchAssets(in: collection, options: nil)
     }
+    
 	// MARK: - PHPhotoLibraryChangeObserver methods
 	
 	public func photoLibraryDidChange(_ changeInstance: PHChange) {

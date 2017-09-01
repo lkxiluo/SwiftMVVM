@@ -82,6 +82,7 @@ class RecommentViewController: BaseViewController {
         recommentCollectionView?.es_addInfiniteScrolling {
             
             // TODO:上拉加载更多（这里只加载推荐商品）
+            self.recommentCollectionView?.es_stopLoadingMore()
         }
         view.addSubview(recommentCollectionView!)
     }

@@ -32,6 +32,6 @@ func QHLog<T>(_ message: T, file: String = #file, funcName: String = #function, 
         dateFormatter.dateFormat = "HH:mm:ss.SSS"
         let dateString           = dateFormatter.string(from: Date())
         
-        print(" ------->function：\(fileName)\n ------->funcName：\(funcName)\n ------->line：\(lineNum)\n ------->time：\(dateString)\n ------->message：\(message)\n")
+        print(" ------->fileName：\(fileName)\n ------->funcName：\(funcName)\n ------->line：\(lineNum)\n ------->time：\(dateString)\n ------->message：\(message)\n")
     #endif
 }

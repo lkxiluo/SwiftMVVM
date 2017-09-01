@@ -1,0 +1,6 @@
+framework module NetworkEye {
+  umbrella header "NetworkEye.swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

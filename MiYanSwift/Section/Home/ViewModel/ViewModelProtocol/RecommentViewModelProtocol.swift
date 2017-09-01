@@ -9,10 +9,7 @@
 import Foundation
 
 protocol RecommentViewModelProtocol {
-    
     var items: [RecommentDateProtocol] { get set }
     var recommentModel: RecommentBaseModel { get set }
-//    func loadRecommentDate(completeHandler: @escaping (_ message: String, _ isSuccess: Bool) -> Void) -> Void
-//    func loadRecommentGoods()
 }
 

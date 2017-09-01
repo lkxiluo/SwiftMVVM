@@ -37,17 +37,13 @@ struct SectionHeader {
     var height: CGFloat {
     
         var headerHeight = 0.0
-    
         guard isShow else {
-            
             return CGFloat(headerHeight)
         }
         
         if sectionTitle.characters.count > 0 {
-            
             headerHeight = 44.0
         } else {
-        
             headerHeight = Double(APPMACROS_BASE_MARGIN * 2)
         }
         
@@ -63,6 +59,8 @@ protocol RecommentDateProtocol {
     
     var sectionHeader: SectionHeader { get }
     var sectionFooterTitle: String { get }
+    
+//    mutating func setRowCount(rowCount: Int)
 }
 
 extension RecommentDateProtocol {

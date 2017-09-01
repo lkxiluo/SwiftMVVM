@@ -8,7 +8,7 @@ target 'MiYanSwift' do
     pod 'Kingfisher' # 图片加载
     pod 'SnapKit' # 自动布局封装
     pod 'FSPagerView' # 轮播图
-    pod 'PageMenu' # tab菜单
+    pod 'PageMenu' # tab菜单 PagingMenuController / pod 'SwipeMenuViewController'
     #pod 'SQLite.swift' # 数据库操作
     pod 'Hero' # VC跳转动画
     pod 'Timepiece' #
@@ -29,5 +29,6 @@ target 'MiYanSwift' do
     #pod 'EasyTipView' # 气泡提示
     #pod 'TagListView' # 标签组
     #pod "MarkdownView" # Markdown识别
+    pod "GodEye" # display Log,Crash,Network,ANR,Leak,CPU,RAM,FPS,NetFlow,Folder and etc with one line of code based on Swift.
     
 end
